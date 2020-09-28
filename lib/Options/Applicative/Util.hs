@@ -16,7 +16,7 @@ module Options.Applicative.Util
 
       -- * Parsing a list of things
     , splitWith   -- :: AttoParser p -> String -> ReadM [p]
-    , splitUntil  -- :: String -> ReadM [Text]
+    , splitOn     -- :: String -> ReadM [Text]
 
       -- * Parsing one thing out of a list of things
     , anyOf       -- :: [(a, [Text])] -> AttoParser a
@@ -50,10 +50,10 @@ splitWith p sepChars = attoReadM $ A.choice
     , p `A.sepBy` (A.skipSpace *> foldMap A.char sepChars <* A.skipSpace)
     ]
 
--- | Like 'splitWith', but the parser just takes everything it can until the
+-- | Like 'splitWith', but the parser is just taking everything it can until the
 -- next separation character.
-splitUntil :: String -> ReadM [Text]
-splitUntil sepChars = splitWith (A.takeWhile (`notElem` sepChars)) sepChars
+splitOn :: String -> ReadM [Text]
+splitOn sepChars = A.takeWhile (`notElem` sepChars) `splitWith` sepChars
 
 -- | Create a parser that matches case-insensitively for all elements of a given
 -- list.
