@@ -23,7 +23,7 @@ module Options.Applicative.Util
     , anyOfRM       -- :: [(a, [Text])] -> ReadM a
 
       -- * Easier parsing for a thing
-    , aliases       -- :: [Text] -> AttoParser Text
+    , aliases       -- :: Foldable t => t Text -> AttoParser Text
 
       -- * Misc
     , showSepChars  -- :: Foldable t => t Char -> [Char]
@@ -60,8 +60,9 @@ splitOn sepChars = A.takeWhile (`notElem` sepChars) `splitWith` sepChars
 
 -- | Create a parser that matches case-insensitively for all elements of a given
 -- list.
-aliases :: [Text] -> AttoParser Text
+aliases :: Foldable t => t Text -> AttoParser Text
 aliases = foldMap A.asciiCI
+{-# INLINE aliases #-}
 
 -- | Create a parser that matches any of the given 'a', with the given aliases.
 anyOf :: [(a, [Text])] -> AttoParser a
