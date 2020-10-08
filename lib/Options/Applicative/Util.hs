@@ -9,21 +9,24 @@
 -}
 module Options.Applicative.Util
     ( -- * Types
-      AttoParser  -- type alias: Data.Attoparsec.Parser
+      AttoParser    -- type alias: Data.Attoparsec.Parser
 
       -- * Interfacing with parsing libraries
-    , attoReadM   -- :: AttoParser a -> ReadM a
+    , attoReadM     -- :: AttoParser a -> ReadM a
 
       -- * Parsing a list of things
-    , splitWith   -- :: AttoParser p -> String -> ReadM [p]
-    , splitOn     -- :: String -> ReadM [Text]
+    , splitWith     -- :: AttoParser p -> String -> ReadM [p]
+    , splitOn       -- :: String -> ReadM [Text]
 
       -- * Parsing one thing out of a list of things
-    , anyOf       -- :: [(a, [Text])] -> AttoParser a
-    , anyOfRM     -- :: [(a, [Text])] -> ReadM a
+    , anyOf         -- :: [(a, [Text])] -> AttoParser a
+    , anyOfRM       -- :: [(a, [Text])] -> ReadM a
 
       -- * Easier parsing for a thing
-    , aliases     -- :: [Text] -> AttoParser Text
+    , aliases       -- :: [Text] -> AttoParser Text
+
+      -- * Misc
+    , showSepChars  -- :: Foldable t => t Char -> [Char]
     ) where
 
 import qualified Data.Attoparsec.Text as A
@@ -67,3 +70,9 @@ anyOf = A.choice . map (\(a, ts) -> a <$ aliases ts)
 -- | Like 'anyOf', but return a 'ReadM a' instead of an 'AttoParser a'.
 anyOfRM :: [(a, [Text])] -> ReadM a
 anyOfRM = attoReadM . anyOf
+
+-- | Pretty print some container of separation characters, inserting a space
+-- between each item.
+showSepChars :: Foldable t => t Char -> String
+showSepChars = concatMap ((' ' :) . (:[]))
+{-# INLINE showSepChars #-}
