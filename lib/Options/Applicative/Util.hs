@@ -34,6 +34,7 @@ module Options.Applicative.Util
 
       -- * Parsing one thing out of a list of things
     , anyOf         -- :: [(a, [Text])] -> AttoParser a
+    , anyOfSkip     -- :: (Char -> Bool) -> [(a, [Text])] -> AttoParser a
     , anyOfRM       -- :: [(a, [Text])] -> ReadM a
 
       -- * Easier parsing for a thing
@@ -81,6 +82,11 @@ aliases = foldMap A.asciiCI
 -- | Create a parser that matches any of the given 'a', with the given aliases.
 anyOf :: [(a, [Text])] -> AttoParser a
 anyOf = A.choice . map (\(a, ts) -> a <$ aliases ts)
+
+-- | Like 'anyOf' but, after having found a match, skip all remaining
+-- text as long as the given predicate is true.
+anyOfSkip :: (Char -> Bool) -> [(a, [Text])] -> AttoParser a
+anyOfSkip p xs = anyOf xs <* A.skipWhile p
 
 -- | Like 'anyOf', but return a 'ReadM a' instead of an 'AttoParser a'.
 anyOfRM :: [(a, [Text])] -> ReadM a
