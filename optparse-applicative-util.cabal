@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.34.6.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d66db58f6b41a97134a93f95c7d18c1c86118485b167cd55bbdfbf986695d136
+-- hash: b093e8236dbe8dc5fca1c4a60bf677add3d4d3e2f13296105f11920199af418b
 
 name:           optparse-applicative-util
 version:        0.1.0.0
@@ -12,7 +12,7 @@ synopsis:       Utility functions for working with optparse-applicative
 homepage:       https://gitlab.com/slotThe/optparse-applicative-util
 author:         slotThe
 maintainer:     soliditsallgood@mailbox.org
-copyright:      2020 slotThe
+copyright:      2020–2022  slotThe
 license:        AGPL-3
 license-file:   LICENSE
 build-type:     Simple
@@ -26,7 +26,7 @@ library
       lib
   ghc-options: -O2 -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
   build-depends:
-      attoparsec >=0.13.2.4 && <0.14
+      attoparsec >=0.13.2.4 && <0.15
     , base >=4.7 && <5
     , optparse-applicative >=0.15.0.0 && <0.17
     , text >=1.2.4.0 && <1.3
