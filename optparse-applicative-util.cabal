@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b093e8236dbe8dc5fca1c4a60bf677add3d4d3e2f13296105f11920199af418b
+-- hash: 640324e86ff87d2bfe86c11127d1617d00e36579ea3d671c21add61e77c32bfc
 
 name:           optparse-applicative-util
 version:        0.1.0.0
@@ -24,7 +24,7 @@ library
       Paths_optparse_applicative_util
   hs-source-dirs:
       lib
-  ghc-options: -O2 -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
+  ghc-options: -O2 -Weverything -Wno-implicit-prelude -Wno-missing-import-lists -Wno-unused-packages -Wno-missing-safe-haskell-mode -Wno-all-missed-specialisations -Wno-unsafe
   build-depends:
       attoparsec >=0.13.2.4 && <0.15
     , base >=4.7 && <5
