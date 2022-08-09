@@ -27,6 +27,7 @@ module Options.Applicative.Util
 
       -- * Interfacing with parsing libraries
     , attoReadM     -- :: AttoParser a -> ReadM a
+    , optionA       -- :: AttoParser a -> Mod OptionFields a -> Parser a
 
       -- * Parsing a list of things
     , splitWith     -- :: AttoParser p -> String -> ReadM [p]
@@ -48,7 +49,7 @@ import qualified Data.Attoparsec.Text as A
 import qualified Data.Text            as T
 
 import Data.Text (Text)
-import Options.Applicative (ReadM, eitherReader)
+import Options.Applicative (Mod, OptionFields, Parser, ReadM, eitherReader, option)
 
 
 -- | Less confusion as to which 'Parser' one is referring to.
@@ -58,6 +59,9 @@ type AttoParser = A.Parser
 attoReadM :: AttoParser a -> ReadM a
 attoReadM p = eitherReader (A.parseOnly p . T.pack)
 
+-- | Like 'option', but takes an 'AttoParser' instead of a 'ReadM'.
+optionA :: AttoParser a -> Mod OptionFields a -> Parser a
+optionA = option . attoReadM
 -- | Parse a collection of things, separated by some specific characters.
 splitWith
     :: AttoParser p  -- ^ Parser for a single entry
