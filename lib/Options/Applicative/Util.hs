@@ -30,8 +30,8 @@ module Options.Applicative.Util
     , optionA       -- :: AttoParser a -> Mod OptionFields a -> Parser a
 
       -- * Parsing a list of things
-    , splitWith     -- :: AttoParser p -> String -> ReadM [p]
-    , splitOn       -- :: String -> ReadM [Text]
+    , splitWith     -- :: AttoParser p -> String -> AttoParser [p]
+    , splitOn       -- :: String -> AttoParser [Text]
 
       -- * Parsing one thing out of a list of things
     , anyOf         -- :: [(a, [Text])] -> AttoParser a
@@ -62,19 +62,20 @@ attoReadM p = eitherReader (A.parseOnly p . T.pack)
 -- | Like 'option', but takes an 'AttoParser' instead of a 'ReadM'.
 optionA :: AttoParser a -> Mod OptionFields a -> Parser a
 optionA = option . attoReadM
+
 -- | Parse a collection of things, separated by some specific characters.
 splitWith
     :: AttoParser p  -- ^ Parser for a single entry
     -> String        -- ^ Characters that may be used to separate different entries
-    -> ReadM [p]
-splitWith p sepChars = attoReadM $ A.choice
+    -> AttoParser [p]
+splitWith p sepChars = A.choice
     [ [] <$ A.endOfInput
     , p `A.sepBy` (A.skipSpace *> foldMap A.char sepChars <* A.skipSpace)
     ]
 
 -- | Like 'splitWith', but the parser is just taking everything it can until the
 -- next separation character.
-splitOn :: String -> ReadM [Text]
+splitOn :: String -> AttoParser [Text]
 splitOn sepChars = A.takeWhile (`notElem` sepChars) `splitWith` sepChars
 
 -- | Create a parser that matches case-insensitively for all elements of a given
