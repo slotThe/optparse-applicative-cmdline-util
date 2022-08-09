@@ -4,15 +4,15 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 640324e86ff87d2bfe86c11127d1617d00e36579ea3d671c21add61e77c32bfc
+-- hash: 4ec0b01a6c1e71d5060129404126b85ad910ca30695434e7e245493e80b912a3
 
 name:           optparse-applicative-util
-version:        0.1.0.0
+version:        0.2.0
 synopsis:       Utility functions for working with optparse-applicative
 homepage:       https://gitlab.com/slotThe/optparse-applicative-util
-author:         slotThe
+author:         Tony Zorman
 maintainer:     soliditsallgood@mailbox.org
-copyright:      2020–2022  slotThe
+copyright:      2020–2022  Tony Zorman
 license:        AGPL-3
 license-file:   LICENSE
 build-type:     Simple

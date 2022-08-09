@@ -1,9 +1,9 @@
 {- |
    Module      : Options.Applicative.CmdLine.Util
    Description : Utility functions for working with optparse-applicative
-   Copyright   : (c) slotThe, 2020
+   Copyright   : (c) Tony Zorman  2020 2021 2022
    License     : AGPL
-   Maintainer  : slotThe <soliditsallgood@mailbox.org>
+   Maintainer  : Tony Zorman <soliditsallgood@mailbox.org>
    Stability   : experimental
    Portability : non-portable
 

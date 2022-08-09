@@ -1,11 +1,11 @@
 name:                optparse-applicative-util
-version:             0.1.0.0
+version:             0.2.0
 homepage:            https://gitlab.com/slotThe/optparse-applicative-util
 license:             AGPL-3
 synopsis:            Utility functions for working with optparse-applicative
-author:              slotThe
+author:              Tony Zorman
 maintainer:          soliditsallgood@mailbox.org
-copyright:           2020–2022  slotThe
+copyright:           2020–2022  Tony Zorman
 
 ghc-options:
   -O2
