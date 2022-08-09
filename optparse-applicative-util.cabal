@@ -19,7 +19,7 @@ build-type:     Simple
 
 library
   exposed-modules:
-      Options.Applicative.Util
+      Options.Applicative.CmdLine.Util
   other-modules:
       Paths_optparse_applicative_util
   hs-source-dirs:

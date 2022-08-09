@@ -1,5 +1,5 @@
 {- |
-   Module      : Options.Applicative.Util
+   Module      : Options.Applicative.CmdLine.Util
    Description : Utility functions for working with optparse-applicative
    Copyright   : (c) slotThe, 2020
    License     : AGPL
@@ -21,7 +21,7 @@ Another focus involves connecting the 'attoparsec' library with
 'optparse-applicative' (this is often useful when options involve more
 complex parsing patterns).
 -}
-module Options.Applicative.Util
+module Options.Applicative.CmdLine.Util
     ( -- * Types
       AttoParser    -- type alias: Data.Attoparsec.Parser
 
