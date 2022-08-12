@@ -1,5 +1,2 @@
 with-compiler: ghc-9.0.2
-
 packages: ./optparse-applicative-cmdline-util.cabal
-
-optimization: 2
