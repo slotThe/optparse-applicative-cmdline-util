@@ -4,14 +4,14 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 017480b0055c6a953b5ae062a0149a95390e494ed872625a863e8970a5ab7793
+-- hash: 0d20b1dbdcc35d588e6f42cd5f183e1aa167060318abdda92c8365bb4b28f7d1
 
 name:           optparse-applicative-cmdline-util
 version:        0.2.0
 synopsis:       Utility functions for working with optparse-applicative
-description:    See README.md at <https://gitlab.com/slotThe/optparse-applicative-util/-/blob/master/README.md>
+description:    See README.md <https://gitlab.com/slotThe/optparse-applicative-util/-/blob/master/README.md here>
 category:       System, CLI, Options, Parsing
-homepage:       https://gitlab.com/slotThe/optparse-applicative-util
+homepage:       https://github.com/slotThe/optparse-applicative-cmdline-util
 bug-reports:    https://github.com/slotThe/optparse-applicative-cmdline-util/issues
 author:         Tony Zorman
 maintainer:     soliditsallgood@mailbox.org
@@ -19,6 +19,9 @@ copyright:      2020–2022  Tony Zorman
 license:        AGPL-3
 license-file:   LICENSE
 build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
 
 source-repository head
   type: git
