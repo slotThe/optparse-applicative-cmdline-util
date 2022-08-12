@@ -1,12 +1,12 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.6.
+-- This file has been generated from package.yaml by hpack version 0.33.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 7a4f4229237c6b603880cefcc0559fffbdcaf61ab258d72b8a61d79d392be89b
+-- hash: 5f5783e1267e36146e7a6fcb14eb9724aa6560902d2d7f45182d2aa0972ef11b
 
-name:           optparse-applicative-util
+name:           optparse-applicative-cmdline-util
 version:        0.2.0
 synopsis:       Utility functions for working with optparse-applicative
 homepage:       https://gitlab.com/slotThe/optparse-applicative-util
@@ -21,7 +21,7 @@ library
   exposed-modules:
       Options.Applicative.CmdLine.Util
   other-modules:
-      Paths_optparse_applicative_util
+      Paths_optparse_applicative_cmdline_util
   hs-source-dirs:
       lib
   ghc-options: -O2 -Weverything -Wno-implicit-prelude -Wno-missing-import-lists -Wno-unused-packages -Wno-missing-safe-haskell-mode -Wno-all-missed-specialisations -Wno-unsafe -Wno-prepositive-qualified-module
