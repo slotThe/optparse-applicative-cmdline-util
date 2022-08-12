@@ -1,14 +1,15 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.34.6.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5f5783e1267e36146e7a6fcb14eb9724aa6560902d2d7f45182d2aa0972ef11b
+-- hash: bea51abb21fda1f7b3b3a13e4e9da8a2b4d3d27b07638d412a817d9c8f4467d7
 
 name:           optparse-applicative-cmdline-util
 version:        0.2.0
 synopsis:       Utility functions for working with optparse-applicative
+category:       System, CLI, Options, Parsing
 homepage:       https://gitlab.com/slotThe/optparse-applicative-util
 author:         Tony Zorman
 maintainer:     soliditsallgood@mailbox.org

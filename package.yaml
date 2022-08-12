@@ -6,6 +6,7 @@ synopsis:            Utility functions for working with optparse-applicative
 author:              Tony Zorman
 maintainer:          soliditsallgood@mailbox.org
 copyright:           2020–2022  Tony Zorman
+category:            System, CLI, Options, Parsing
 
 ghc-options:
   -O2
