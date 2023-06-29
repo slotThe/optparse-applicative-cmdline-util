@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.35.0.
+-- This file has been generated from package.yaml by hpack version 0.35.1.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 4b97910c51d4eb28de63cb0a5672d4af540087709804a8518cdcb27d2bf0811a
+-- hash: d2e9a9f209509f2a7914a04db9348434d7f0ce2553be29b9f8dc782f83cd0b8c
 
 name:           optparse-applicative-cmdline-util
 version:        0.2.0
@@ -39,5 +39,5 @@ library
       attoparsec >=0.13.2.4 && <0.15
     , base >=4.7 && <5
     , optparse-applicative >=0.15.0.0 && <0.18
-    , text >=1.2.4.0 && <1.3
+    , text >=1.2.4.0 && <2.2
   default-language: Haskell2010
