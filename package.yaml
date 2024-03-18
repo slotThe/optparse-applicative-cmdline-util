@@ -1,5 +1,5 @@
 name:                optparse-applicative-cmdline-util
-version:             0.2.0
+version:             0.2.1
 homepage:            https://github.com/slotThe/optparse-applicative-cmdline-util
 github:              slotThe/optparse-applicative-cmdline-util
 license:             AGPL-3
@@ -7,7 +7,7 @@ synopsis:            Utility functions for working with optparse-applicative
 description:         See README.md <https://gitlab.com/slotThe/optparse-applicative-util/-/blob/master/README.md here>
 author:              Tony Zorman
 maintainer:          soliditsallgood@mailbox.org
-copyright:           2020–2022  Tony Zorman
+copyright:           2020–2024  Tony Zorman
 category:            System, CLI, Options, Parsing
 
 extra-source-files:
@@ -28,9 +28,9 @@ ghc-options:
 
 dependencies:
   - base                  >= 4.7      && < 5
-  - optparse-applicative  >= 0.15.0.0 && < 0.18
-  - attoparsec            >= 0.13.2.4 && < 0.15
-  - text                  >= 1.2.4.0  && < 2.2
+  - optparse-applicative  >= 0.15.0.0 && < 0.19
+  - attoparsec            >= 0.13.2.4 && < 0.16
+  - text                  >= 1.2.4.0  && < 2.3
 
 library:
   source-dirs: lib
