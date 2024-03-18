@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.35.1.
+-- This file has been generated from package.yaml by hpack version 0.36.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d2e9a9f209509f2a7914a04db9348434d7f0ce2553be29b9f8dc782f83cd0b8c
+-- hash: 7ebab34fb31e9a3317fbbe15b8f36815fec3a027c3f7c3c3f7f6c573106da073
 
 name:           optparse-applicative-cmdline-util
 version:        0.2.0
@@ -34,7 +34,7 @@ library
       Paths_optparse_applicative_cmdline_util
   hs-source-dirs:
       lib
-  ghc-options: -Weverything -Wno-implicit-prelude -Wno-missing-import-lists -Wno-unused-packages -Wno-missing-safe-haskell-mode -Wno-all-missed-specialisations -Wno-unsafe -Wno-prepositive-qualified-module
+  ghc-options: -Weverything -Wno-implicit-prelude -Wno-missing-import-lists -Wno-unused-packages -Wno-missing-safe-haskell-mode -Wno-all-missed-specialisations -Wno-unsafe -Wno-safe -Wno-prepositive-qualified-module -Wmissing-kind-signatures
   build-depends:
       attoparsec >=0.13.2.4 && <0.15
     , base >=4.7 && <5
